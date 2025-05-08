@@ -1,8 +1,6 @@
 Rails.application.routes.draw do
-  mount_avo
 
   resources :stock_movements, only: [ :new, :create, :index ]
-  get "dashboard", to: "dashboard#index" # Opcional, para o painel
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   root "home#index"
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
