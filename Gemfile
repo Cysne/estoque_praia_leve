@@ -66,7 +66,4 @@ group :test do
   gem "selenium-webdriver"
 end
 
-
-gem "administrate", "~> 0.19.0"
-gem 'sprockets-rails'
-
+gem "avo"
