@@ -1,0 +1,17 @@
+pt-BR:
+  activerecord:
+    models:
+      produto: "Produto"
+    attributes:
+      produto:
+        nome: "Nome"
+        descricao: "Descrição"
+        estoque: "Estoque"
+        marca: "Marca"
+        cor: "Cor"
+        foto: "Foto"
+  helpers:
+    submit:
+      create: "Criar %{model}"
+      update: "Atualizar %{model}"
+      submit: "Salvar %{model}"
