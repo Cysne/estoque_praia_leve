@@ -1,17 +1,10 @@
-<body>
+<body style="background-color:#FCF7E9;">
   <%= render 'home/partials/header' %> 
   <%= render 'home/partials/banner' %>
   
-  <section class="py-5">
-    <div class="container">
-      <h3 class="mb-4">Coleções em Destaque</h3>
-      <div class="row g-3">
-        <%= render 'home/partials/collection_card' %> 
-        <%= render 'home/partials/collection_card' %>
-        <%= render 'home/partials/collection_card' %>
-      </div>
-    </div>
-  </section>
+  
+  <%= render 'home/partials/categories' %>
+  <%= render 'home/partials/trending_products' %>
   <%= render 'home/partials/product_card' %>
   <%= render 'home/partials/footer' %>
 </body>
