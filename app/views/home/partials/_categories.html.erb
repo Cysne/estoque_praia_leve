@@ -1,0 +1,18 @@
+<% icones = { "Chapéus" => "bi bi-hat", "Sandálias" => "bi bi-bootstrap", "Bolsas" => "bi bi-bag" } %>
+<section class="py-5">
+  <div class="container">
+    <h3 class="mb-4 text-center" style="color: #7B2E1F;">Coleções em Destaque</h3>
+    <div class="row g-3 justify-content-center">
+      <% ["Chapéus", "Sandálias", "Bolsas"].each do |colecao| %>
+        <div class="col-6 col-md-2">
+          <div class="card">
+            <div class="card-body text-center">
+              <i class="<%= icones[colecao] %> fs-2"></i>
+              <h5 class="card-title mt-2"><%= colecao %></h5>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>
