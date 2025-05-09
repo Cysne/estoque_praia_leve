@@ -1,0 +1,30 @@
+<section class="py-5" style="background-color: #F8F3E6;">
+  <div class="container">
+    <h3 class="mb-4 text-center" style="color: #7B2E1F;">Produtos em Alta</h3>
+    <% if @produtos.present? %>
+      <div class="row row-cols-2 row-cols-md-5 g-3">
+        <% @produtos.each do |produto| %>
+          <div class="col">
+            <div class="card h-100" style="background-color: #F8F3E6;">
+              <% if produto.foto.attached? %>
+                <%= image_tag produto.foto, class: "card-img-top", alt: produto.nome %>
+              <% else %>
+                <img src="https://via.placeholder.com/300x200?text=Sem+Imagem" class="card-img-top" alt="Sem imagem">
+              <% end %>
+              <div class="card-body">
+                <h6 class="text-muted"><%= produto.marca %></h6>
+                <h5 class="card-title"><%= produto.nome %></h5>
+                <p><%= produto.descricao %></p>
+                <div class="mt-auto d-flex justify-content-center ">
+                  <a href="<%= produto_path(produto) %>" class="btn btn-lg text-light w-100" style="background-color: #4C774C;">comprar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    <% else %>
+      <p class="text-muted">Nenhum produto em alta no momento.</p>
+    <% end %>
+  </div>
+</section>
